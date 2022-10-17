@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,400;1,500&display=swap");
+
+:root {
+  --main: #ff0019;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Besley", serif;
+  transition: 0.3s all;
+}
+*::selection {
+  background: var(--main);
+  color: #000;
+}
+html {
+  font-size: 62.5%;
+}
+section {
+  padding: 2rem 9%;
+}
+.heading {
+  font-size: 4.5rem;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.heading span {
+  color: var(--main);
+}
+
+.Vehicle_Slider {
+  padding-bottom: 5rem;
+}
+.Vehicle_Slider .box {
+  text-align: center;
+}
+.Vehicle_Slider img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(0.8);
+  opacity: 0.5;
+}
+.Vehicle_Slider .swiper-slide-active img {
+  transform: scale(1);
+  opacity: 1;
+}
+.Vehicle_Slider .content {
+  padding-top: 1rem;
+  transform: scale(0);
+}
+
+.Vehicle_Slider .swiper-slide-active .content {
+  transform: scale(1);
+}
+
+.Vehicle_Slider .box .content h3 {
+  font-size: 2.5rem;
+}
+.Vehicle_Slider .box .content .price {
+  font-size: 2.2rem;
+  color: var(--main);
+  padding: 1rem 0;
+  font-weight: bold;
+}
+.Vehicle_Slider .box .content .price span {
+  font-size: 1.5rem;
+  color: rgb(9, 8, 8);
+  font-weight: 500;
+}
+.Vehicle_Slider .box .content p {
+  color: rgb(9, 8, 8);
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  padding-top: 1.5rem;
+  border-top: 0.2rem solid rgba(0, 0, 0, 0.6);
+}
+.Vehicle_Slider .box .content span {
+  color: var(--main);
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+.swiper-pagination-bullet-active {
+  background: var(--main);
+}
+
+/* Theme Toggle */
+.ThemeToggle {
+  position: fixed;
+  top: 10rem;
+  right: -20rem;
+  background: #000;
+  text-align: center;
+  width: 20rem;
+  z-index: 1000;
+}
+.ThemeToggle.active {
+  right: 0;
+}
+
+.ThemeToggle h3 {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.ThemeToggle .buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+.ThemeToggle .themeBtn {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.toggleBtn {
+  position: absolute;
+  top: 0;
+  left: -5.9rem;
+  padding: 1.3rem 1.5rem;
+  background: #000;
+  cursor: pointer;
+}
+.toggleBtn i {
+  color: #fff;
+  font-size: 3rem;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+}
